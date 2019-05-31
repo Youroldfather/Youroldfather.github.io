@@ -359,7 +359,9 @@
         }
         $("#list").empty();
         $("#list").append("<td>"+name+"</td>");
-        if(xueli==1){
+        if(xueli==0){
+             $("#list").append("<td>null</td>");
+        }else if(xueli==1){
             $("#list").append("<td>专科</td>");
         }else if(xueli==2){
             $("#list").append("<td>本科</td>");
@@ -370,8 +372,10 @@
         }
         if(sex==0) {
             $("#list").append("<td>男</td>");
-        }else{
+        }else if(sex==1){
             $("#list").append("<td>女</td>");
+        }else{
+            $("#list").append("<td>null</td>");
         }
         $("#list").append("<td>"+birthd+"</td>");
         $("#list").append("<td>"+phone+"</td>");
