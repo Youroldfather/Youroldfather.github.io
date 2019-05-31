@@ -360,9 +360,7 @@
         }
         $("#list").empty();
         $("#list").append("<td>"+name+"</td>");
-        if(xueli==0){
-             $("#list").append("<td>null</td>");
-        }else if(xueli==1){
+        if(xueli==1){
             $("#list").append("<td>专科</td>");
         }else if(xueli==2){
             $("#list").append("<td>本科</td>");
@@ -370,6 +368,8 @@
             $("#list").append("<td>硕士</td>");
         }else if(xueli==4){
             $("#list").append("<td>博士</td>");
+        }else{
+            $("#list").append("<td>null</td>");
         }
         if(sex==0) {
             $("#list").append("<td>男</td>");
