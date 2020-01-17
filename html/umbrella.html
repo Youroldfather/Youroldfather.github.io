@@ -8,6 +8,108 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <style text="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body {
+            background-image: radial-gradient(mintcream 0%, lightgray 100%);
+        ;
+        }
+
+        .Container {
+            margin: 4% auto;
+            width: 210px;
+            height: 140px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        #carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotation 20s infinite linear;
+        }
+
+        #carousel:hover {
+            animation-play-state: paused;
+        }
+
+        #carousel figure {
+            display: block;
+            position: absolute;
+            width: 220px;
+            height: 120px;
+            left: 10px;
+            top: 10px;
+            background: black;
+            overflow: hidden;
+            border: solid 5px black;
+        }
+
+        img {
+            filter: grayscale(1);
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            width: 100%;
+            height: 100%;
+        }
+
+        img:hover {
+            filter: grayscale(0);
+            transform: scale(1.2, 1.2);
+        }
+
+        #carousel figure:nth-child(1) {
+            transform: rotateY(0deg) translateZ(288px);
+        }
+
+        #carousel figure:nth-child(2) {
+            transform: rotateY(60deg) translateZ(288px);
+        }
+
+        #carousel figure:nth-child(3) {
+            transform: rotateY(120deg) translateZ(288px);
+        }
+
+        #carousel figure:nth-child(4) {
+            transform: rotateY(180deg) translateZ(288px);
+        }
+
+        #carousel figure:nth-child(5) {
+            transform: rotateY(240deg) translateZ(288px);
+        }
+
+        #carousel figure:nth-child(6) {
+            transform: rotateY(300deg) translateZ(288px);
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -211,37 +313,19 @@
     <!-- 羽毛球比赛-->
     <div class="navigation-fluid panel panel-danger">
         <div class="panel-body">
-            <h2>java70期羽毛球比赛</h2>
+            <h2>小甜心的相册</h2>
         </div>
-        <div class="panel-footer">
-            <h3>Java70期羽毛球比赛策划书方案 </h3><br>
-            <b>活动目的：</b><br>
-            &nbsp;&nbsp;为丰富同学们的业余文化生活，培养同学们顽强奋斗、勇于拼搏的优良品质。特举办首次“Java杯“羽毛球比赛，具体规则如下：<br>
-            <b>参加对象：</b>上海传智播客Java70期学员<br>
-            <b>报名方式：</b>需自由组合，找班长报名<br>
-            <b>报名时间：</b>2019.6.5号结束报名<br>
-            <b>活动地点：</b>2号楼中央空地<br>
-            <b>比赛项目：</b>男女混合<br>
-            <b>比赛时间：</b>2019.6.8-2019.6.9两天（人数多就分两天，人数少就8号一天）<br>
-            <b>比赛中执行羽毛球规则，另加补充如下：</b><br>
-            &nbsp;&nbsp;1)	采用淘汰制进行预赛；<br>
-            &nbsp;&nbsp;2)	每场比赛采用3局2胜制，男女混合每局11球决胜；<br>
-            &nbsp;&nbsp;3)	比赛前10分钟到场，迟到5分钟视为弃权，对手直接晋级，时间以裁判时间为准；<br>
-            &nbsp;&nbsp;4)	本次比赛，比分先达到11分的一方获胜，而只有一次机会；<br>
-            &nbsp;&nbsp;5)	每局比赛结束后双方需交换场地；<br>
-            &nbsp;&nbsp;6)	掷硬币：每场比赛开始之前，参赛双方首先要在裁判员的主持下，由裁判员抛硬币确定胜者。胜者具有挑选发球权或挑选场地的优先权。赢方选剩的那项权力归输方所有；<br>
-            &nbsp;&nbsp;7)	合理发球：球员必须站在本主发球区向位于自己相对应的斜对角一端的发球区发球。球体须经球网的上方飞过，落入对方场地的发球区域内才有效；<br>
-            &nbsp;&nbsp;8)	为了保持比赛公开、公正的原则，比赛由裁判全程安排；<br>
-            <b>男女混合打：</b><br>
-            &nbsp;&nbsp;1)	发球员的发球次数为双数时，双方运动员均应在各自的右发球区发球；<br>
-            &nbsp;&nbsp;2)	发球员的发球次数为单数时，双方运动员均应在各自的左发球区发球；<br>
-            &nbsp;&nbsp;3)	发球队和接球队应交替对击直至"违例”或"死球”；<br>
-            <b>奖品设置：</b><br>
-            &nbsp;&nbsp;比赛取前三名颁发奖品；<br>
-            &nbsp;&nbsp;奖品如下：<br>
-            &nbsp;&nbsp;&nbsp;第一名：&nbsp;两人各任选一本Java相关书籍+一份零食大礼包<br>
-            &nbsp;&nbsp;&nbsp;第二名：&nbsp;两人各一个精美水杯(班主任亲自挑选，直男必备水杯)<br>
-            &nbsp;&nbsp;&nbsp;第三名：&nbsp;播仔两个<br>
+        <div class="Container">
+            <div id="carousel">
+                <figure><img src="../images/01.jpg" alt=""></figure>
+                <figure><img src="../images/02.jpg" alt=""></figure>
+                <figure><img src="../images/04.jpg" alt=""></figure>
+                <figure><img src="../images/03.jpg" alt=""></figure>
+                <figure><img src="../images/05.jpg" alt=""></figure>
+                <figure><img src="../images/03.jpg" alt=""></figure>
+                <figure><img src="../images/04.jpg" alt=""></figure>
+                <figure><img src="../images/01.jpg" alt=""></figure>
+            </div>
         </div>
     </div>
 
